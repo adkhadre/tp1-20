@@ -26,6 +26,9 @@ public class Fraction {
     public int getDen() {
         return den;
     }
+    public double doubleValue() {
+        return (double) num / den;
+    }
 
     @Override
     public String toString() {
