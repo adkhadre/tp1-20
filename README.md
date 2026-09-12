@@ -102,7 +102,11 @@ Quelle syntaxe est utilisée pour ce fichier ?
     *.iml
     ```
 1. Configurez l'accès par clé publique/clé privée à la forge (cf. [Connecting to GitHub with SSH](https://docs.github.com/en/authentication/connecting-to-github-with-ssh)).
-    > Expliquez la procédure de façon synthétique
+   > Générer une paire de clés SSH (clé privée et clé publique).
+   > Envoyé la clé publique à la forge qui est validé par le professeur.
+   > Configuré le fichier config dans ~/ .ssh pour utilisé automatiquement la clé privé.
+   > Tester la connexion avec ssh gitpe
+   
 
 ## Partie II (à faire durant le TD) : compléter la classe `Fraction`
 Dans cet partie, vous compléterez les classes `Fraction` et `Main`.
