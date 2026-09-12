@@ -7,6 +7,10 @@ public class Main{
         assert f2.toString().equals("5/1"): "Erreur constructeur avec un paramétre";
         assert f3.toString().equals("0/1"):  "Erreur constructeur sans paramétre";
 
-        System.out.println("Teste réussi");
+        System.out.println("Teste toString réussi");
+
+        Fraction f = new Fraction(1, 2);
+        assert f.doubleValue() == 0.5: "Erreur : conversion en double";
+        System.out.println("Test converstion réussi");
     }
 }

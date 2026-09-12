@@ -145,14 +145,17 @@ Vous respecterez les consignes ci-dessous :
      public int getNum() {
         return num;
     }
-
+ 
     public int getDen() {
         return den;
     }
     ```
 1. Ajoutez une méthode de consultation de la valeur sous la forme d'un nombre en virgule flottante (méthode `doubleValue()`) (cf. [`java.lang.Number`](https://docs.oracle.com/en/java/javase/19/docs/api/java.base/java/lang/Number.html)),
    ```Java
-    // Assertions pour tester la conversion
+    Fraction f = new Fraction(1, 2);
+    assert f.doubleValue() == 0.5: "Erreur : conversion en double";
+    System.out.println("Test converstion réussi");
+
     ```
 1. Ajoutez une méthode permettant l'addition de deux fractions (la méthode `add` prend en paramètre *une* fraction et *retourne* la somme de la fraction courante et du paramètre),
    ```Java
