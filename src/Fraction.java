@@ -1,4 +1,6 @@
 public class Fraction {
+    public static final Fraction ZERO = new Fraction(0, 1);
+    public static final Fraction ONE = new Fraction(1, 1);
     private int num;
     private int den;
 
