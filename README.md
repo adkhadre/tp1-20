@@ -45,26 +45,61 @@ Vous utiliserez le protocole `https` pour cela;
 Vérifiez avec le navigateur;
     ```bash
       git add *.java
+      git add ../Readme.md
+      git commit -m "Ajout de la méthode toString de Fraction et modification de Main"
+      git remote add origin https://github.com/adkhadre/tp1-20.git
+      git push -u origin main
       
     ```
 1. Sur la forge, ajoutez un fichier de documentation `README.md`.
 Quelle syntaxe est utilisée pour ce fichier ?
-    > Répondre ici
+    > la syntaxe utilisée est le Markdown
 1. Récupérez localement les modifications effectuées sur la forge.
     ```bash
-    # Répondre ici
+    git pull
     ```
 1. Ajoutez les répertoires et fichiers issus de la compilation aux fichiers ignorés par `git` (cf. [`.gitignore` pour Java](https://github.com/github/gitignore/blob/main/Java.gitignore));
     ```bash
-    # Copier ici le contenu de `.gitignore`
+    ### IntelliJ IDEA ###
+   out/
+   !**/src/main/**/out/
+   !**/src/test/**/out/
+   .kotlin
+   
+   ### Eclipse ###
+   .apt_generated
+   .classpath
+   .factorypath
+   .project
+   .settings
+   .springBeans
+   .sts4-cache
+   bin/
+   !**/src/main/**/bin/
+   !**/src/test/**/bin/
+   
+   ### NetBeans ###
+   /nbproject/private/
+   /nbbuild/
+   /dist/
+   /nbdist/
+   /.nb-gradle/
+   
+   ### VS Code ###
+   .vscode/
+   
+   ### Mac OS ###
+   .DS_Store
     ```
 1. Retirez les fichiers de configuration de l'IDE du projet;
     ```bash
-    # Répondre ici
+    git rm -r --cached .idea/
+    git rm --cached tp1.iml
     ```
     Ajoutez-les aux fichiers ignorés par `git`.
     ```bash
-    # Copier ici les modifications de `.gitignore`
+    .idea/
+    *.iml
     ```
 1. Configurez l'accès par clé publique/clé privée à la forge (cf. [Connecting to GitHub with SSH](https://docs.github.com/en/authentication/connecting-to-github-with-ssh)).
     > Expliquez la procédure de façon synthétique
