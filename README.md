@@ -142,7 +142,13 @@ Vous respecterez les consignes ci-dessous :
     ```
 1. Ajoutez une méthode de consultation du numérateur et du dénominateur (par convention, en Java, une méthode retournant la valeur de l'attribut `anAttribute` est nommée `getAnAttribute`),
     ```Java
-    // Définition des getters
+     public int getNum() {
+        return num;
+    }
+
+    public int getDen() {
+        return den;
+    }
     ```
 1. Ajoutez une méthode de consultation de la valeur sous la forme d'un nombre en virgule flottante (méthode `doubleValue()`) (cf. [`java.lang.Number`](https://docs.oracle.com/en/java/javase/19/docs/api/java.base/java/lang/Number.html)),
    ```Java

@@ -19,6 +19,13 @@ public class Fraction {
         den = 1;
     }
 
+    public int getNum() {
+        return num;
+    }
+
+    public int getDen() {
+        return den;
+    }
 
     @Override
     public String toString() {
