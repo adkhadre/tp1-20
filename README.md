@@ -118,18 +118,27 @@ Vous respecterez les consignes ci-dessous :
 
 1. Ajoutez les attributs représentants le numérateur et le dénominateur (nombres entiers).
     ```Java
-    // Déclaration des attributs
+    private int num;
+    private int den;
     ```
 1. Ajoutez les constructeurs (cf. [Constructor Declarations](https://docs.oracle.com/javase/specs/jls/se19/html/jls-8.html#jls-8.8)) suivants :
     * initialisation avec un numérateur et un dénominateur,
     * initialisation avec juste le numérateur (dénominateur égal à _1_),
     * initialisation sans argument (numérateur égal _0_ et dénominateur égal à _1_),
     ```Java
-    // Assertions pour tester les constructeurs (avec toString)
+     Fraction f1 = new Fraction(2, 3);
+     Fraction f2 = new Fraction(5);
+     Fraction f3 = new Fraction();
+     assert f1.toString().equals("2/3"): "Erreur constructeur avec deux paramétres";
+     assert f2.toString().equals("5/1"): "Erreur constructeur avec un paramétre";
+     assert f3.toString().equals("0/1"):  "Erreur constructeur sans paramétre";
+     System.out.println("Teste réussi");
+     # Faut taper la commande : javac -ea Main.java pour activer les assertions lors de la compilation. 
     ```
 1. Ajoutez les fractions constantes ZERO (0, 1) et UN (1, 1) (cf. [Constants in Java](https://www.baeldung.com/java-constants-good-practices)),
     ```Java
-    // Déclaration des constantes
+    public static final Fraction ZERO = new Fraction(0, 1);
+    public static final Fraction ONE = new Fraction(1, 1);
     ```
 1. Ajoutez une méthode de consultation du numérateur et du dénominateur (par convention, en Java, une méthode retournant la valeur de l'attribut `anAttribute` est nommée `getAnAttribute`),
     ```Java

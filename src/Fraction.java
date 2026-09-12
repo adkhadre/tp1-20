@@ -19,7 +19,7 @@ public class Fraction {
         den = 1;
     }
 
-    
+
     @Override
     public String toString() {
         return num + "/" + den;
