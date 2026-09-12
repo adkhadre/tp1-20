@@ -19,8 +19,9 @@ public class Fraction {
         den = 1;
     }
 
+    
     @Override
     public String toString() {
-        return "Je suis une fraction.";
+        return num + "/" + den;
     }
 }
