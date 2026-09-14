@@ -35,6 +35,23 @@ public class Fraction {
                 this.den * f.den
         );
     }
+    @Override
+    public boolean equals(Object o) {
+
+        if (this == o) {
+            return true;
+        }
+
+
+        if (!(o instanceof Fraction)) {
+            return false;
+        }
+
+        Fraction f = (Fraction) o;
+
+        return this.num * f.den ==  f.num * this.den ;
+    }
+
 
     @Override
     public String toString() {

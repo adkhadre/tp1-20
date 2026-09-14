@@ -169,7 +169,18 @@ Vous respecterez les consignes ci-dessous :
     ```
 1. Ajoutez le test d'égalité entre fractions (deux fractions sont égales si elles représentent la même fraction réduite) (cf. [`java.lang.Object.equals`](https://docs.oracle.com/en/java/javase/19/docs/api/java.base/java/lang/Object.html#equals(java.lang.Object))),
    ```Java
-    // Assertions pour tester l'égalité
+     // Assertions pour tester l'égalité
+   Fraction f6 = new Fraction(1, 2);
+   Fraction f7 = new Fraction(2, 4);
+   Fraction f8 = new Fraction(3, 4);
+   
+   assert f6.equals(f7) : "Erreur : 1/2 devrait être égal à 2/4";
+   assert !f6.equals(f8) : "Erreur : 1/2 ne devrait pas être égal à 3/4";
+   assert f6.equals(f6) : "Erreur : une fraction devrait être égale à elle-même";
+   
+   System.out.println("Test égalité réussi");
+
+
     ```
 1. Ajoutez la comparaison de fractions selon l'ordre naturel (cf. [`java.lang.Comparable`](https://docs.oracle.com/en/java/javase/19/docs/api/java.base/java/lang/Comparable.html)).
    ```Java

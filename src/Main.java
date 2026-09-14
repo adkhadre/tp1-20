@@ -21,5 +21,14 @@ public class Main{
         assert result.getNum() == 5;
         assert result.getDen() == 6;
 
+        Fraction f6 = new Fraction(1, 2);
+        Fraction f7 = new Fraction(2, 4);
+        Fraction f8 = new Fraction(3, 4);
+
+        assert f6.equals(f7) : "Erreur : 1/2 devrait être égal à 2/4";
+        assert !f6.equals(f8) : "Erreur : 1/2 ne devrait pas être égal à 3/4";
+        assert f6.equals(f6) : "Erreur : une fraction devrait être égale à elle-même";
+
+        System.out.println("Test égalité réussi");
     }
 }
