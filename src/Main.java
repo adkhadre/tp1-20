@@ -30,5 +30,24 @@ public class Main{
         assert f6.equals(f6) : "Erreur : une fraction devrait être égale à elle-même";
 
         System.out.println("Test égalité réussi");
+
+
+        Fraction f9 = new Fraction(1, 2);
+        Fraction f10 = new Fraction(3, 4);
+        Fraction f11 = new Fraction(2, 4);
+
+        assert f9.compareTo(f10) < 0 :
+                "Erreur : f9 devrait être inférieur à f10";
+
+        assert f10.compareTo(f9) > 0 :
+                "Erreur : f10 devrait être supérieur à f9";
+
+        assert f9.compareTo(f11) == 0 :
+                "Erreur : f9 devrait être égal à f11";
+
+        System.out.println("Test comparaison réussi");
+
+
+
     }
 }
