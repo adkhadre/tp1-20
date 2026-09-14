@@ -1,4 +1,4 @@
-public class Fraction  implements Comparable {
+public class Fraction extends Number implements Comparable {
     public static final Fraction ZERO = new Fraction(0, 1);
     public static final Fraction ONE = new Fraction(1, 1);
     private int num;
@@ -18,7 +18,20 @@ public class Fraction  implements Comparable {
         num = 0;
         den = 1;
     }
+    @Override
+    public int intValue() {
+        return num/den;
+    }
 
+    @Override
+    public long longValue() {
+        return (long)num/den;
+    }
+
+    @Override
+    public float floatValue() {
+        return (float) num/den;
+    }
 
 
     public int getNum() {

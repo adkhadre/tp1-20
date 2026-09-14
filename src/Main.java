@@ -48,6 +48,13 @@ public class Main{
         System.out.println("Test comparaison réussi");
 
 
+        Number aNumber = java.math.BigDecimal.ONE;
+        Number anotherNumber = new Fraction(1, 2);
 
+        assert java.lang.Math.abs(
+                aNumber.doubleValue() + anotherNumber.doubleValue() - 1.5
+        ) < 1E-8 : "Erreur : conversion en double";
+
+        System.out.println("Test héritage de Number réussi");
     }
 }
