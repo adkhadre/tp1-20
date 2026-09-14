@@ -133,7 +133,6 @@ Vous respecterez les consignes ci-dessous :
      assert f2.toString().equals("5/1"): "Erreur constructeur avec un paramétre";
      assert f3.toString().equals("0/1"):  "Erreur constructeur sans paramétre";
      System.out.println("Teste réussi");
-     # Faut taper la commande : javac -ea Main.java pour activer les assertions lors de la compilation. 
     ```
 1. Ajoutez les fractions constantes ZERO (0, 1) et UN (1, 1) (cf. [Constants in Java](https://www.baeldung.com/java-constants-good-practices)),
     ```Java
@@ -157,9 +156,16 @@ Vous respecterez les consignes ci-dessous :
     System.out.println("Test converstion réussi");
 
     ```
-1. Ajoutez une méthode permettant l'addition de deux fractions (la méthode `add` prend en paramètre *une* fraction et *retourne* la somme de la fraction courante et du paramètre),
-   ```Java
-    // Assertions pour tester l'addition
+   1. Ajoutez une méthode permettant l'addition de deux fractions (la méthode `add` prend en paramètre *une* fraction et *retourne* la somme de la fraction courante et du paramètre),
+      ```Java
+       // Assertions pour tester l'addition
+      Fraction f1 = new Fraction(1, 2);
+      Fraction f2 = new Fraction(1, 3);
+      
+      Fraction result = f1.add(f2);
+      
+      assert result.getNum() == 5;
+      assert result.getDen() == 6;
     ```
 1. Ajoutez le test d'égalité entre fractions (deux fractions sont égales si elles représentent la même fraction réduite) (cf. [`java.lang.Object.equals`](https://docs.oracle.com/en/java/javase/19/docs/api/java.base/java/lang/Object.html#equals(java.lang.Object))),
    ```Java

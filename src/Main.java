@@ -12,5 +12,14 @@ public class Main{
         Fraction f = new Fraction(1, 2);
         assert f.doubleValue() == 0.5: "Erreur : conversion en double";
         System.out.println("Test converstion réussi");
+
+        Fraction f4 = new Fraction(1, 2);
+        Fraction f5 = new Fraction(1, 3);
+
+        Fraction result = f4.add(f5);
+
+        assert result.getNum() == 5;
+        assert result.getDen() == 6;
+
     }
 }

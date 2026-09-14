@@ -29,6 +29,12 @@ public class Fraction {
     public double doubleValue() {
         return (double) num / den;
     }
+    public Fraction add(Fraction f){
+        return new Fraction(
+                this.num * f.den + f.num * this.den,
+                this.den * f.den
+        );
+    }
 
     @Override
     public String toString() {
