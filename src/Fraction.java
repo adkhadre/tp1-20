@@ -1,4 +1,4 @@
-public class Fraction {
+public class Fraction  implements Comparable {
     public static final Fraction ZERO = new Fraction(0, 1);
     public static final Fraction ONE = new Fraction(1, 1);
     private int num;
@@ -18,6 +18,8 @@ public class Fraction {
         num = 0;
         den = 1;
     }
+
+
 
     public int getNum() {
         return num;
@@ -51,7 +53,16 @@ public class Fraction {
 
         return this.num * f.den ==  f.num * this.den ;
     }
+    @Override
+    public int compareTo(Object obj) {
+        if(!(obj instanceof Fraction))
+            throw new ClassCastException("Impossible de comparé"+ obj.getClass().getName()+" à une Fraction");
+        Fraction autre = (Fraction) obj;
+        long produit1 = (long) this.num * autre.den;
+        long produit2 = (long) autre.num * this.den;
 
+        return Long.compare(produit1, produit2);
+    }
 
     @Override
     public String toString() {
